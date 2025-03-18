@@ -1,0 +1,27 @@
+* {
+    font-family: Courier;
+    font-size: large;
+}
+body {
+    text-align: center;
+    background-color: rgb(0, 30, 30);
+}
+button {
+    background-color: burlywood;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Ebrima';
+}
+#display {
+    background-color: black;
+    border-color: aqua;
+    color:white;
+    margin: 20;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 10px;
+    font-family: Courier;
+    font-size: larger;
+}
