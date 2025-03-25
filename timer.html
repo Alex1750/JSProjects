@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Timer | Basic Tools</title>
+        <link rel="stylesheet" href="universal.css">
+        <link rel="stylesheet" href="css/timer.css">
+        <body>
+            <div id="navbar" class="navbar">
+                <span id="title" class="title">BasicTools.com</span>
+                <a id="home" href="home.html">Home</a>
+                <a id="calc" href="calc.html">Calculator</a>
+                <a id="timer" href="timer.html" class="active">Timer</a>
+                <a id="stopwatch" href="stopwatch.html">Stopwatch</a>
+                <a id="dice" href="dice.html">Dice Roller</a>
+                <a id="about" href="about.html">About</a>
+            </div>
+            <div id="main" class="main">
+                <div id="time" class="display" onload="showTime()"></div>
+            </div>
+        </body>
+        <script>
+            function showTime() {
+                var date = new Date();
+                    var hour = date.getHours();
+                    var minute = date.getMinutes();
+                    var second = date.getSeconds();
+                    var session;
+
+                    if (hour == 0) {
+                        hour = 12;
+                        session = "AM";
+                    } else {
+                        hour -= 12;
+                        session = "PM";
+                    }
+
+                    hour = (hour < 10) ? "0" + hour : hour;
+                    minute = (minute < 10) ? "0" + minute : minute;
+                    second = (second < 10) ? "0" + second : second;
+                    var time = String(hour + ":" + minute + ":" + second + " " + session);
+                    document.getElementById("time").innerHTML = time;
+                    setTimeout(showTime, 1000);
+                }
+                    showTime();
+                    </script>
+        </script>
+    </head>
+</html>
